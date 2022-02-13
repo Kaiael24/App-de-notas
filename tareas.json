@@ -1,0 +1,15 @@
+[
+{
+    "titulo":"crear tareas.json",
+    "estado":"terminada"
+
+},
+{
+    "titulo":"crear array de objetos",
+    "estado":"en proceso"
+},
+{
+    "titulo":"crear archivo app.js",
+    "estado": "pendiente"
+}
+]
