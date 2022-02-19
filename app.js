@@ -1,16 +1,24 @@
-const fs = require("fs")
+/* const fs = require("fs") */
+const tareas = require("./tareas")
 const process = require("process")
-const leerCambiarJson = JSON.parse(fs.readFileSync("./tareas.json", "utf-8"))
 
 let consola= process.argv[2] && process.argv[2].toLowerCase()
-
 switch(consola){
     case "listar":
         console.log("*******************************")
-        leerCambiarJson.forEach(elementArray => {
+        tareas.leerJson().forEach(elementArray => {
             console.log(`Titulo:${elementArray.titulo}\nEstado:${elementArray.estado}`)
             console.log("*******************************")
         });
+        break;
+    case "crear":
+        let titulo1 = process.argv[3]
+        let estado2 = process.argv[4]
+        console.log("***************************************")
+        console.log("Se agrego nueva tarea en archivo Json.")
+        console.log("***************************************")
+        tareas.crearTarea(titulo1,estado2)
+        
         break;
     case undefined:
         console.log("***************************************")
