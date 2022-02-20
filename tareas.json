@@ -1,22 +1,18 @@
 [
     {
         "titulo": "Pepo y sus amigos",
-        "estado": "Terminada"
+        "estado": "terminada"
     },
     {
         "titulo": "Los amigos perrunos",
-        "estado": "En progreso"
+        "estado": "en progreso"
     },
     {
         "titulo": "Los gatitos",
-        "estado": "Pendiente"
+        "estado": "pendiente"
     },
     {
         "titulo": "Tobi el cocker viejo",
-        "estado": "Terminada"
-    },
-    {
-        "titulo": "Probando",
-        "estado": "pendiente"
+        "estado": "terminada"
     }
 ]

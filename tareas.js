@@ -18,6 +18,15 @@ let funcionesJson = {
             let jsonNuevo = JSON.stringify(nuevaTarea)
             fs.writeFileSync("./tareas.json", jsonNuevo, "utf-8")
         },
-        
+        deshacer:()=>{
+            let paraBorrar = funcionesJson.leerJson()
+            paraBorrar.pop()
+            funcionesJson.escribirJSON(paraBorrar)
+        },
+        filtrarPorEstado:function(paraFiltro){
+            let tareas = this.leerJson()
+            let tareasFiltradas =tareas.filter(tarea => tarea.estado == paraFiltro)
+            return tareasFiltradas
+        }
 }
 module.exports = funcionesJson
